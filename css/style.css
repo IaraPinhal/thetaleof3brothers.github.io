@@ -1,0 +1,315 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+	}
+
+
+:root {
+	--cursorX: 50px;
+  --cursorY: 50px;
+	font-size: 1vw;
+}
+
+:root:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+	mix-blend-mode: multiply;
+  background: rgba(255,243,216,0.80) radial-gradient(
+    circle 20vmax at var(--cursorX) var(--cursorY),
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,1) 100%
+  )
+}
+
+.gray{
+	background-color:hsla(0,0%,15%,1.00);
+}
+
+section{
+	height: 100vh;
+	width: 100vw;
+	background: no-repeat center center fixed ;
+	background-size: cover;
+}
+
+.content{
+    width: calc((100% / 12) * 8);
+}
+.center{
+position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.display{
+	display: flex;
+	justify-content: space-between;    
+	align-items: center;
+}
+
+h1{
+    font-family: freight-big-pro,serif;
+    font-style: italic;
+	color: hsla(42,100%,92%,1);
+	font-size: 5rem;
+	font-weight: 100;
+	text-transform: uppercase;
+	text-align: center; /* For Edge */
+	letter-spacing:0.5rem;
+
+}
+
+h2{
+	font-family: freight-big-pro,serif;
+    font-style: italic;
+	font-size: 1rem;
+	color: #FFF3D8;
+	text-transform: uppercase;
+}
+
+h3{
+	font-family: dolly-new,sans-serif;
+	font-style: normal;
+	font-size: 1rem;
+	color: #FFF3D8;
+}
+
+h4{
+	font-family: dolly-new,sans-serif;
+	font-style: normal;
+	font-size: 1rem;
+	color: #FFF3D8;
+}
+
+a{
+	  text-decoration: none;
+}
+.linha{
+	width: calc((100% / 12) *7);
+	height: 1px;
+	background-color: #FFF3D8;
+}
+
+p{
+	width: 100%;
+	font-family: dolly-new,sans-serif;
+	font-style: normal;
+	font-size: 1.05rem;	
+	color: #FFF3D8;
+	text-align: center;
+	font-weight: 500;
+	letter-spacing: 0.1rem;
+}
+.wave{
+	font-family: freight-big-pro,serif;
+	font-style: italic;
+	color: #FFF3D8;
+	width: 100%;
+	height:auto;
+	margin: -3rem 0px;
+	transform-origin: center;}
+
+
+.spina{
+		font-family: freight-big-pro,serif;
+	font-style: italic;
+	fill: #FFF3D8;
+	text-transform: uppercase;
+	width: 70%;
+	  height: auto;
+  transform-origin: center;
+	margin: auto;
+  animation-name: spin;
+	font-size: 5rem;
+  animation-duration: 15000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-360deg);
+    }
+}
+.img1{
+	background-image: url("../images/web 2.png");
+	background-position: center;
+	background-size: 20%;
+}
+.img2{
+	background-image: url("../images/text.png");
+	background-position: center;
+	background-size: 20%;
+}
+.img3{
+	background-image: url("../images/fotos editadas/back.jpg");
+	background-position: center;
+	background-size: 100%;
+}
+.img4{
+	background-image: url("../images/fotos editadas/back_maos.jpg");
+	background-position: center;
+	background-size: 100%;
+}
+.img5{
+	background-image: url("../images/fotos editadas/back_maos_colar.jpg");
+	background-position: center;
+	background-size: 100%;
+}
+.img6{
+	background-image: url("../images/fotos editadas/lampada.jpg");
+	background-position: center;
+	background-size: 100%;
+}
+.img7{
+	background-image: url("../images/fotos editadas/capa.jpg");
+	background-position: center;
+	background-size: 100%;
+}
+.img8{
+	background-image: url("../images/fotos editadas/morto.jpg");
+	background-position: center;
+	background-size: 100%;
+}
+.img9{
+	background-image: url("../images/fotos editadas/mais_velho_raio.jpg");
+	background-position: center;
+	background-size: 100%;
+}
+.curning{
+	  line-height: 2.5rem;
+
+}
+
+.backhide{
+	font-size: 0.8rem; 
+	text-align: left; 
+	display: inline-block;
+  width: 30%;
+  height: 55vh;
+	margin: 0 1%
+}
+.flip-card {
+  display: inline-block;
+  background-color: transparent;
+  width: 30%;
+  height: 55vh;
+  perspective: 1000px;
+	margin: 0 1%
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+		  border-radius: 25px;
+
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+		  border-radius: 25px;
+
+
+}
+
+.flip-card-front {
+	background-image:url("../images/fotos editadas/Mais_velho.jpg");
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.flip-card-back {
+  background-color: #d8ffd8;
+  transform: rotateY(180deg);
+}
+
+
+
+
+.flip-card-front2, .flip-card-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+		  border-radius: 25px;
+
+
+}
+
+.flip-card-front2 {
+	background-image:url("../images/fotos editadas/Do_meio.jpg");
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.flip-card-back2 {
+  background-color: #ffd8d8;
+  transform: rotateY(180deg);
+}
+.flip-card-front3, .flip-card-back3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+		  border-radius: 25px;
+
+
+}
+
+.flip-card-front3 {
+	background-image:url("../images/fotos editadas/Mais_novo.jpg");
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.flip-card-back3 {
+  background-color: #d9d8ff;
+  transform: rotateY(180deg);
+}
+
+.content2{
+    width: calc((100% / 12) * 10);
+}
+
+.fade {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+.fade:hover {
+    opacity: 0;
+    transition: opacity .55s ease-in-out;
+    -moz-transition: opacity .55s ease-in-out;
+    -webkit-transition: opacity .55s ease-in-out;
+}
